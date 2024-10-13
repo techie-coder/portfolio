@@ -54,10 +54,10 @@ const Concluding = () => {
         </div>
         <div className='h-20vh'>
         <Card3 title={card4.title} body={card4.body} />
-        <div className="grid grid-cols-2 h-30vh">
-            <span className="h-30vh"></span>
-            <span className="h-full span-cols-2 bg-yellow border-2 border-white w-40vw"></span>
+        
         </div>
+        <div className="mt-20 bg-yellow justify-end">
+            <Card3 title={contact.title} body={contact.body} />
         </div>
         </div>
         </>
