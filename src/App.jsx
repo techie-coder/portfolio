@@ -11,7 +11,11 @@ import Teaser from './components/Teaser';
 import Concluding from './components/Concluding'
 import './index.css'
 
+
+
+
 const App = () => {
+
 	return (
 		<>
 		<NavBar />
@@ -29,4 +33,5 @@ const App = () => {
 		</>
 	)
 }
+
 export default App
