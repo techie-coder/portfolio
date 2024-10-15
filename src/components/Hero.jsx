@@ -2,10 +2,13 @@ import React from 'react';
 import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import luffy from '../assets/luffy.svg'
 
 const Hero = () => {
 
 	const container = useRef(null);
+	const boxContainer = useRef(null);
+	const imgContainer = useRef(null);
 
 	useGSAP(
 		() => {
@@ -16,8 +19,16 @@ const Hero = () => {
 				ease: "power1.inOut"
 			});
 
+			gsap.from(imgContainer.current, {
+				duration: 1,
+				rotation: 30,
+				scale: 50,
+				ease: "power1.inOut"
+				
+			})
+
 		},
-		{ scope: container }
+		{ scope: container, imgContainer }
 	);
 	
 
@@ -29,14 +40,18 @@ const Hero = () => {
 			<div className="p-3 m-3 align-center"><h1 className="dela-gothic-one-regular text-blue text-7xl">Saswata Biswas</h1>
 			<p className="mt-3 ml-3 flex justify-start dela-gothic-one-regular text-white text-3xl">Full Stack Developer</p>
 		</div></div>
-		<div className="ml-10 relative h-70vh">
+		<div ref={boxContainer} className="ml-10 relative h-70vh">
+		
 			<div className="z-0 absolute h-full w-40vw m-10 p-5 border-2 border-white">
 			</div>
 			<div className="z-1 relative bg-yellow h-full w-40vw">
+			<img ref={imgContainer} src={luffy} alt="luffy" className='absolute z-0'></img>
 			<div className="pt-10 pl-3">
-			<ul className="dela-gothic-one-regular text-lg">
+			<ul className="dela-gothic-one-regular text-lg relative z-10">
 			{listItems.map((item, index) => (<li key={index}><a href="#">{item}</a></li>))}
+			
 			</ul>
+			
 			</div>
 			</div>
 		</div>
