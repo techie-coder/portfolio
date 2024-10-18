@@ -9,6 +9,7 @@ const Hero = () => {
 	const container = useRef(null);
 	const boxContainer = useRef(null);
 	const imgContainer = useRef(null);
+	const listContainer = useRef(null)
 
 	useGSAP(
 		() => {
@@ -21,14 +22,21 @@ const Hero = () => {
 
 			gsap.from(imgContainer.current, {
 				duration: 1,
-				rotation: 30,
-				scale: 50,
+				opacity: -3,
+				x: 60,
+				y: 60,
+				rotate: -30,
 				ease: "power1.inOut"
-				
+			})
+
+			gsap.from(listContainer.current, {
+				opacity: -1.5,
+				duration: 2,
+				ease: "power1.inOut"
 			})
 
 		},
-		{ scope: container, imgContainer }
+		{ scope: container, imgContainer, listContainer }
 	);
 	
 
@@ -47,7 +55,7 @@ const Hero = () => {
 			<div className="z-1 relative bg-yellow h-full w-40vw">
 			<img ref={imgContainer} src={luffy} alt="luffy" className='absolute z-0'></img>
 			<div className="pt-10 pl-3">
-			<ul className="dela-gothic-one-regular text-lg relative z-10">
+			<ul ref={listContainer} className="dela-gothic-one-regular text-lg relative z-10">
 			{listItems.map((item, index) => (<li key={index}><a href="#">{item}</a></li>))}
 			
 			</ul>
