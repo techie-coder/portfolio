@@ -40,8 +40,8 @@ const Concluding = () => {
             ]
         }
     return (
-        <div data-scroll-section>
-        <div className="grid grid-cols-2 ml-10 p-5 gap-10" data-scroll>
+        <>
+        <div className="grid grid-cols-2 ml-10 p-5 gap-10">
             {details.map((item, index) => (
                 <Card3 
                 key={index}
@@ -49,18 +49,18 @@ const Concluding = () => {
                 body={item.body}
                 /> 
             ))}
-        <div className="col-span-2 justify-self-center w-1/2" data-scroll>
+        <div className="col-span-2 justify-self-center w-1/2">
             <Card3 title={card3.title} body={card3.body} />
         </div>
-        <div className='h-20vh' data-scroll>
+        <div className='h-20vh'>
         <Card3 title={card4.title} body={card4.body} />
         
         </div>
-        <div className="mt-20 bg-yellow justify-end" data-scroll>
+        <div className="mt-20 bg-yellow justify-end">
             <Card3 title={contact.title} body={contact.body} />
         </div>
         </div>
-        </div>
+        </>
     )
 
 }
@@ -70,7 +70,7 @@ export default Concluding;
 const Card3 = (props) => {
     const {title, body} = props
     return (
-        <div className="bg-yellow border-2 border-white" data-scroll>
+        <div className="bg-yellow border-2 border-white">
             <div className="p-3">
             <h1 className="dela-gothic-one-regular text-blue text-3xl mb-3">{title}</h1>
             <ul className="poppins text-black text-xl">

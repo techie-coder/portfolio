@@ -48,14 +48,12 @@ const Hero = () => {
 			<div className="p-3 m-3 align-center"><h1 className="dela-gothic-one-regular text-blue text-7xl">Saswata Biswas</h1>
 			<p className="mt-3 ml-3 flex justify-start dela-gothic-one-regular text-white text-3xl">Full Stack Developer</p>
 		</div></div>
-
-		{/* Box element*/}
 		<div ref={boxContainer} className="ml-10 relative h-70vh">
 		
 			<div className="z-0 absolute h-full w-40vw m-10 p-5 border-2 border-white">
 			</div>
 			<div className="z-1 relative bg-yellow h-full w-40vw">
-			<img ref={imgContainer} src={luffy} alt="luffy" className='absolute z-0 h-17/20 mt-20 ml-10'></img>
+			<img ref={imgContainer} src={luffy} alt="luffy" className='absolute z-0'></img>
 			<div className="pt-10 pl-3">
 			<ul ref={listContainer} className="dela-gothic-one-regular text-lg relative z-10">
 			{listItems.map((item, index) => (<li key={index}><a href="#">{item}</a></li>))}

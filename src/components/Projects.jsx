@@ -23,7 +23,7 @@ const Projects = () => {
 
 
     return (
-        <div className="ml-10 space-y-10 w-80vw" data-scroll-section>
+        <div className="ml-10 space-y-10 w-80vw">
             <h1 className="dela-gothic-one-regular text-blue text-5xl">Projects</h1>
             <div className="p-5 grid grid-cols-2 justify-center w-full gap-10">
                 <span className="">
