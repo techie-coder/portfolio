@@ -9,6 +9,7 @@ import AwardsMembership from './components/AwardsMembership';
 import Projects from './components/Projects';
 import Teaser from './components/Teaser';
 import Concluding from './components/Concluding'
+import Footer from './components/Footer';
 import './index.css'
 
 
@@ -30,6 +31,7 @@ const App = () => {
 		<Teaser />
 		<Concluding />
 		</div>
+		<Footer />
 		</>
 	)
 }

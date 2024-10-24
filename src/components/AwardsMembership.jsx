@@ -49,7 +49,7 @@ export default AwardsMembership
 
 const Card2 = ({awards}) => {
     return (
-        <div className="bg-yellow w-full border-2 border-white">
+        <div className="bg-yellow w-full border-2 border-white scale-100 hover:scale-110 transition ease-in-out">
             <ul className="p-3">
                 {awards.map((item, index) => (
                 <li key={index}><span className="dela-gothic-one-regular text-black text-xl">{item.title}</span><span className="poppins text-black text-xl"> - {item.body}</span></li>))}

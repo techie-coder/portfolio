@@ -71,7 +71,7 @@ export default Concluding;
 const Card3 = (props) => {
     const {title, body, id} = props
     return (
-        <div className="bg-yellow border-2 border-white" id={id}>
+        <div className="bg-yellow border-2 border-white scale-100 hover:scale-105 transition ease-in-out" id={id}>
             <div className="p-3">
             <h1 className="dela-gothic-one-regular text-blue text-3xl mb-3">{title}</h1>
             <ul className="poppins text-black text-xl">
