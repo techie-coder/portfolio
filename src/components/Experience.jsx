@@ -11,7 +11,7 @@ const Experience = () => {
         ]
     }
     return (
-        <div className="ml-10 space-y-8">
+        <div className="ml-10 space-y-8" data-scroll-section>
             <h1 className="dela-gothic-one-regular text-blue text-5xl">Experience</h1>
             <div className="p-3 w-2/3">
             <Card
