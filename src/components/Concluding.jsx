@@ -47,16 +47,17 @@ const Concluding = () => {
                 key={index}
                 title={item.title}
                 body={item.body}
+                id={ item.title === "Events" ? "events" : "research"}
                 /> 
             ))}
-        <div className="col-span-2 justify-self-center w-1/2">
+        <div className="col-span-2 justify-self-center w-1/2" id="posters">
             <Card3 title={card3.title} body={card3.body} />
         </div>
-        <div className='h-20vh'>
+        <div className='h-20vh' id="courses">
         <Card3 title={card4.title} body={card4.body} />
         
         </div>
-        <div className="mt-20 bg-yellow justify-end">
+        <div className="mt-20 bg-yellow justify-end" id="contact">
             <Card3 title={contact.title} body={contact.body} />
         </div>
         </div>
@@ -68,9 +69,9 @@ const Concluding = () => {
 export default Concluding;
 
 const Card3 = (props) => {
-    const {title, body} = props
+    const {title, body, id} = props
     return (
-        <div className="bg-yellow border-2 border-white">
+        <div className="bg-yellow border-2 border-white" id={id}>
             <div className="p-3">
             <h1 className="dela-gothic-one-regular text-blue text-3xl mb-3">{title}</h1>
             <ul className="poppins text-black text-xl">

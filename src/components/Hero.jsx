@@ -53,10 +53,10 @@ const Hero = () => {
 			<div className="z-0 absolute h-full w-40vw m-10 p-5 border-2 border-white">
 			</div>
 			<div className="z-1 relative bg-yellow h-full w-40vw">
-			<img ref={imgContainer} src={luffy} alt="luffy" className='absolute z-0'></img>
+			<img ref={imgContainer} src={luffy} alt="luffy" className='absolute z-0 h-17/20 mt-16 ml-11'></img>
 			<div className="pt-10 pl-3">
 			<ul ref={listContainer} className="dela-gothic-one-regular text-lg relative z-10">
-			{listItems.map((item, index) => (<li key={index}><a href="#">{item}</a></li>))}
+			{listItems.map((item, index) => (<li key={index}><a href={"#"+item.toLowerCase()}>{item}</a></li>))}
 			
 			</ul>
 			
