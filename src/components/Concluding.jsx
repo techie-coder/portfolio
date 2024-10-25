@@ -41,7 +41,7 @@ const Concluding = () => {
         }
     return (
         <>
-        <div className="grid grid-cols-2 ml-10 p-5 gap-10">
+        <div data-scroll data-scroll-speed="0.7" className="grid grid-cols-2 ml-10 p-5 gap-10">
             {details.map((item, index) => (
                 <Card3 
                 key={index}

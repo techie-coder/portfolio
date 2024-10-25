@@ -1,5 +1,4 @@
-import React from 'react';
-import { useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import luffy from '../assets/luffy.svg'
@@ -43,7 +42,7 @@ const Hero = () => {
 	const listItems = ['Home', 'About', 'Education', 'Experience', 'Publication', 'Awards', 'Projects', 'Membership', 'Research', 'Events', 'Posters', 'Courses','Contact']
 	
 	return (
-		<div className="h-70vh min-w-screen grid grid-cols-2 justify-between items-center">
+		<div className="h-70vh min-w-screen grid grid-cols-2 justify-between items-center" data-scroll data-scroll-speed="0.3">
 			<div ref={container} className="brand">
 			<div className="p-3 m-3 align-center"><h1 className="dela-gothic-one-regular text-blue text-7xl">Saswata Biswas</h1>
 			<p className="mt-3 ml-3 flex justify-start dela-gothic-one-regular text-white text-3xl">Full Stack Developer</p>
@@ -56,7 +55,7 @@ const Hero = () => {
 			<img ref={imgContainer} src={luffy} alt="luffy" className='absolute z-0 h-17/20 mt-16 ml-11'></img>
 			<div className="pt-10 pl-3">
 			<ul ref={listContainer} className="dela-gothic-one-regular text-lg relative z-10">
-			{listItems.map((item, index) => (<li key={index}><a href={"#"+item.toLowerCase()}>{item}</a></li>))}
+			{listItems.map((item, index) => (<li key={index}><a href="#">{item}</a></li>))}
 			
 			</ul>
 			

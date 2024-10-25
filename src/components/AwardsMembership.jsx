@@ -27,7 +27,7 @@ const AwardsMembership = () => {
     ]
 
     return (
-        <div className="grid grid-cols-2 h-20vh" id="awards">
+        <div data-scroll data-scroll-speed="0.3" className="grid grid-cols-2 h-20vh" id="awards">
         <span className="space-y-10">
         <h1 className="ml-10 dela-gothic-one-regular text-blue text-5xl">Awards</h1>
         <div className="ml-10 p-3 h-2/3 w-max">

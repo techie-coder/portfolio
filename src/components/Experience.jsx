@@ -11,7 +11,7 @@ const Experience = () => {
         ]
     }
     return (
-        <div className="ml-10 space-y-8" id="experience">
+        <div data-scroll data-scroll-speed="0.5" className="ml-10 space-y-8" id="experience">
             <h1 className="dela-gothic-one-regular text-blue text-5xl">Experience</h1>
             <div className="p-3 w-2/3">
             <Card

@@ -13,7 +13,7 @@ const Education = () => {
     ]
 
     return (
-        <div className="h-30vh ml-10" id="education">
+        <div data-scroll data-scroll-speed="0.7" className="h-30vh ml-10" id="education">
             <h1 className="dela-gothic-one-regular text-blue text-5xl">Education</h1>
             {Institutions.map((item, index) => (<Details key={index} title={item.title} body={item.body}/>))}
         </div>

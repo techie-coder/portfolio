@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import NavBar from './components/NavBar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -13,8 +13,17 @@ import Footer from './components/Footer';
 import './index.css'
 
 
-
 const App = () => {
+
+	useEffect( () => {
+		(
+			async() => {
+				const LocomotiveScroll = (await import('locomotive-scroll')).default;
+				const locomotiveScroll = new LocomotiveScroll();
+			}
+		)()
+		}, []
+	)
 
 
 	return (
